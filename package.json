@@ -1,0 +1,20 @@
+{
+  "name": "classic-courier-beta",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allansala27/Classic-Courier-beta.git"
+  },
+  "author": "Carlo Anacta, Peter Fitschen, Wyatt Thomson, Allan Salandanan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/allansala27/Classic-Courier-beta/issues"
+  },
+  "homepage": "https://github.com/allansala27/Classic-Courier-beta#readme"
+}
