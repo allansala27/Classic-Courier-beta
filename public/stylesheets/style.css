@@ -1,0 +1,114 @@
+form.signup,
+form.login {
+  margin-top: 50px;
+}
+
+a:hover {
+	color: #ffe315;
+}
+
+.navbar {
+    border-width: 0 0px 2px 0px;
+    padding-bottom: 20px;
+}
+
+.navbar-header {
+	margin-top: 15px;
+}
+
+.navbar-brand {
+	padding: 15px 15px;
+}
+
+.logo-img {
+	padding: 5px 15px;
+}
+
+.navbar-inverse {
+    background-color: #000000;
+    border-color: #ffe315;
+}
+
+hr {
+	border-color: #ffe315;
+}
+
+h2#head_title {
+	text-align: center;
+	margin-top: 80px;
+}
+
+p#footer_sign {
+	text-align: center;
+	margin-top: 80px;
+}
+
+ul.nav.navbar-nav {
+	margin-top: 15px;
+}
+
+body {
+    margin-top: 50px; /* Required margin for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+.image-bg-fluid-height,
+.image-bg-fixed-height {
+    text-align: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.image-bg-fluid-height {
+	background: url('http://lorempixel.com/g/1920/500/') no-repeat center center scroll;
+    padding: 200px 0;
+    height: 450px;
+}
+
+.image-bg-fixed-height {
+	/*background: url('http://lorempixel.com/g/1920/500/') no-repeat center center scroll;*/
+	background-color: #000000;
+    height: 450px;
+}
+
+.img-center {
+	margin: 0 auto;
+	width:300px;
+	height: auto;
+}
+
+section {
+    padding: 30px 0;
+}
+
+.section-heading {
+    margin: 30px 0;
+    font-size: 4em;
+}
+
+.section-lead {
+    margin: 30px 0;
+}
+
+.section-paragraph {
+    margin: 30px 0;
+}
+
+footer {
+	text-align: center;
+    margin: 50px 0;
+    border-width: 2px 0 0 0;
+    border-color: #ffe315	;
+}
+
+@media(max-width:768px) {
+    section {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .section-heading {
+        font-size: 2em;
+    }
+}
