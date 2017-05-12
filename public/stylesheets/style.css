@@ -97,9 +97,23 @@ section {
 
 footer {
 	text-align: center;
-    margin: 50px 0;
     border-width: 2px 0 0 0;
-    border-color: #ffe315	;
+    border-color: #ffe315;
+    background: #2a2a2a;
+    height: 200px;
+}
+
+footer p {
+	margin-top: 70px;
+	color: #FFFFFF;
+}
+
+.footer_sign {
+	background: #FFFFFF;
+}
+
+#footer_sign {
+	margin-top: 50px;
 }
 
 @media(max-width:768px) {
