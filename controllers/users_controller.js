@@ -7,15 +7,15 @@ router.get('/', function(req,res){
 })
 
 router.get('/login', function(req,res){
-	res.redirect('login');
+	res.render('login');
 });
 
 router.get('/members', function(req,res){
-	res.redirect('members');
+	res.render('members')
 })
 
 router.get('/services', function(req,res){
-	res.redirect('services');
+	res.redirect('services.html');
 })
 
 module.exports = router;
