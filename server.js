@@ -3,6 +3,7 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var session = require("express-session");
 var path = require('path');
+var exphbs = require("express-handlebars")
 
 // Requiring passport as we've configured it
 // var passport = require("./config/passport");
@@ -24,7 +25,6 @@ app.use(express.static("public"));
 
 // Requiring our routes
 require('./routes')(app);
-
 
 // Syncing our database and logging a message to the user upon success
 // db.sequelize.sync().then(function() {
