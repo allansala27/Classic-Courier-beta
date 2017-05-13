@@ -7,7 +7,7 @@ module.exports = function(app){
         var member = require('./controllers/member');
 
         app.use('/', guest);
-        app.use('/users', member);
+        app.use('/member', member);
 
         // Set Handlebars as the default templating engine.
 		app.engine("handlebars", exphbs({ defaultLayout: "main" }));
