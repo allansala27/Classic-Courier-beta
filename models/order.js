@@ -1,16 +1,16 @@
 module.exports = function(sequelize, DataTypes) {
   var Order = sequelize.define("Order", {
-  	CO-code: DataTypes.STRING,
-  	GL-account: DataTypes.STRING,
-  	cost-center: DataTypes.STRING,
-  	profit-center: DataTypes.STRING,
-  	internal-order-number: DataTypes.STRING,
-  	WBS-entity: DataTypes.STRING,
-  	WBS-service: DataTypes.STRING,
+  	CO_code: DataTypes.STRING,
+  	GL_account: DataTypes.STRING,
+  	cost_center: DataTypes.STRING,
+  	profit_center: DataTypes.STRING,
+  	internal_order_number: DataTypes.STRING,
+  	WBS_entity: DataTypes.STRING,
+  	WBS_service: DataTypes.STRING,
   	market: DataTypes.STRING,
   	MPM: DataTypes.STRING,
   	territory:DataTypes.STRING,
-  	PO-number: DataTypes.STRING,
+  	PO_number: DataTypes.STRING,
   })
   return Order;
 };
