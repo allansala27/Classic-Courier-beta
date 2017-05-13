@@ -39,6 +39,7 @@ h2#head_title {
 }
 
 p#footer_sign {
+    color: #000000;
 	text-align: center;
 	margin-top: 80px;
 }
