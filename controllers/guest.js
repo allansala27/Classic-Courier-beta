@@ -8,11 +8,11 @@ router.get('/', function(req, res) {
 });
 
 router.get('/about', function(req,res){
-	res.sendFile(path.join(__dirname, '/../views/about.html'));
+	res.render('about');
 });
 
 router.get('/services', function(req,res){
-	res.sendFile(path.join(__dirname,'/../views/services.html'));
+	res.render('services');
 });
 
 module.exports = router;

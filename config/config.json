@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "IlovePickles9!",
-    "database": "userinfo",
+    "password": null,
+    "database": "classic_courier",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
