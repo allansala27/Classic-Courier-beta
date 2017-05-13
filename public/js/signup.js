@@ -39,7 +39,8 @@ $(document).ready(function() {
     }
     // If we have an account, webid and password, run the signUpUser function
     signUpUser(userData.company, userData.name, userData.address, 
-      userData.city, userData.state, userData.zip, userData.phone, userData.fax, userData.email);
+      userData.city, userData.state, userData.zip, userData.phone, userData.fax, userData.email,
+      userData.creditcard, userData.expdate, userData.billzip);
     companyInput.val("");
     nameInput.val("");
     addressInput.val("");
