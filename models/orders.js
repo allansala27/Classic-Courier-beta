@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Order = sequelize.define("Order", {
+  var Orders = sequelize.define("Orders", {
 
     originLocationAlias: DataTypes.STRING,
     originStreet: DataTypes.STRING,
@@ -55,6 +55,6 @@ module.exports = function(sequelize, DataTypes) {
 
     timestamp: DataTypes.TIME
   })
-  return Order;
+  return Orders;
 };
 
