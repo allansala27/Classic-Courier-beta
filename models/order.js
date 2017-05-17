@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Order = sequelize.define("Order", {
+  var Orders = sequelize.define("Orders", {
   	CO_code: DataTypes.STRING,
   	GL_account: DataTypes.STRING,
   	cost_center: DataTypes.STRING,
@@ -12,5 +12,5 @@ module.exports = function(sequelize, DataTypes) {
   	territory:DataTypes.STRING,
   	PO_number: DataTypes.STRING,
   })
-  return Order;
+  return Orders;
 };

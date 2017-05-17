@@ -1,9 +1,10 @@
 module.exports = function(sequelize, DataTypes) {
-  var Login = sequelize.define("Login", {
+  var LoginInfo = sequelize.define("LoginInfo", {
 
-  	CO_code: DataTypes.STRING,
-  	//enter account columns
+  	account: DataTypes.STRING,
+  	webid: DataTypes.STRING,
+  	password: DataTypes.STRING,
 
   })
-  return Login;
+  return LoginInfo;
 };  
