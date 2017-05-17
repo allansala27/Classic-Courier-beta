@@ -1,21 +1,14 @@
 var models  = require('../models');
 var express = require('express');
 var router  = express.Router();
+var orm = require("../config/orm.js");
 
 router.get('/', function(req,res){
-	res.redirect('index.html');
-})
-
-router.get('/login', function(req,res){
-	res.render('login');
-});
-
-router.get('/members', function(req,res){
 	res.render('members')
 })
 
-router.get('/services', function(req,res){
-	res.redirect('services.html');
+router.get('/orders', function(req,res){
+	res.render('orders');
 })
 
 module.exports = router;

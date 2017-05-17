@@ -15,4 +15,12 @@ router.get('/services', function(req,res){
 	res.render('services');
 });
 
+router.get('/login', function(req,res){
+	res.render('login');
+});
+
+router.get('/contact', function(req,res) {
+	res.render('contact')
+});
+
 module.exports = router;
