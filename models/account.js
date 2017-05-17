@@ -3,6 +3,9 @@ module.exports = function(sequelize, DataTypes) {
 
   	Company: DataTypes.STRING,
   	Name: DataTypes.STRING,
+
+    Address: DataTypes.STRING,
+
   	City: DataTypes.STRING,
   	State: DataTypes.STRING,
   	Zip_code: DataTypes.STRING,

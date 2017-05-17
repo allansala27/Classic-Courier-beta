@@ -37,18 +37,24 @@ module.exports = function(sequelize, DataTypes) {
     pallets: DataTypes.INTEGER,
     tape: DataTypes.INTEGER,
 
-  	CO_code: DataTypes.STRING,
-  	GL_account: DataTypes.STRING,
-  	cost_center: DataTypes.STRING,
-  	profit_center: DataTypes.STRING,
-  	internal_order_number: DataTypes.STRING,
-  	WBS_entity: DataTypes.STRING,
-  	WBS_service: DataTypes.STRING,
-  	market: DataTypes.STRING,
-  	MPM: DataTypes.STRING,
-  	territory:DataTypes.STRING,
-  	PO_number: DataTypes.STRING,
-    
+
+    //!!!!Sony specific accounting fields!!!!!!!!
+    //This is what they care about the most!
+  	CO_code: DataTypes.INTEGER,
+  	GL_account: DataTypes.INTEGER,
+  	cost_center: DataTypes.INTEGER,
+  	profit_center: DataTypes.INTEGER,
+  	internal_order_number: DataTypes.INTEGER,
+  	WBS_entity: DataTypes.INTEGER,
+  	WBS_service: DataTypes.INTEGER,
+  	market: DataTypes.INTEGER,
+  	MPM: DataTypes.INTEGER,
+  	territory:DataTypes.INTEGER,
+  	PO_number: DataTypes.INTEGER,
+
+    comments: DataTypes.STRING,
+
+    timestamp: DataTypes.TIME
   })
   return Orders;
 };
