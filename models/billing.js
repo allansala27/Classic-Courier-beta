@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-	var Billing = sequelize.define("Billing" , {
+	var BillingInfo = sequelize.define("BillingInfo" , {
 
 		Company: DataTypes.STRING,
   		Attn: DataTypes.STRING,
@@ -13,5 +13,5 @@ module.exports = function(sequelize, DataTypes) {
   		Expiration: DataTypes.STRING,
   		Fax: DataTypes.STRING,
 	})
-  return Billing;
+  return BillingInfo;
 }
