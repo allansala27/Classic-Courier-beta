@@ -27,7 +27,7 @@ $(document).ready(function() {
 
   // loginUser does a post to our "api/login" route and if successful, redirects us 
   function loginUser(account, webid, password) {
-    $.post("/api/login", {
+    $.post("/login", {
       account: account,
       webid: webid,
       password: password

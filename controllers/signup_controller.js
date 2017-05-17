@@ -5,6 +5,10 @@ var path = require('path');
 router.get('/', function(req, res) {
     res.render('signup');
 });
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 router.post('/', function(req, res) {
     models.Account.create({
         company: req.body.company,
@@ -15,4 +19,8 @@ router.post('/', function(req, res) {
         res.json(err);
     });
 });
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 module.exports = router;
