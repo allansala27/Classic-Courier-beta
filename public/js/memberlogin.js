@@ -5,7 +5,7 @@ $(document).ready(function() {
   var webidInput = $("input#webid-input");
   var passwordInput = $("input#password-input");
 
-  // When the form is submitted, we validate there's an email and password entered
+  // When the form is submitted, we validate there's an accoutn, webid and password entered
   loginForm.on("submit", function(event) {
     event.preventDefault();
     var userData = {
@@ -18,7 +18,7 @@ $(document).ready(function() {
       return;
     }
 
-    // If we have an email and password we run the loginUser function and clear the form
+    // If we have an account, webid and password we run the loginUser function and clear the form
     loginUser(userData.account, userData.webid, userData.password);
     accountInput.val("");
     webidInput.val("");

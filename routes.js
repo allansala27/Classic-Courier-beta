@@ -14,7 +14,7 @@ module.exports = function(app){
         app.use('/member/order', order);
 
         // Set Handlebars as the default templating engine.
-		app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-		app.set("view engine", "handlebars");
+        app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+        app.set("view engine", "handlebars");
    //other routes..
 }
