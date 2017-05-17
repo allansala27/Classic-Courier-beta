@@ -13,7 +13,10 @@ passport.use(new LocalStrategy(
     // When a user tries to sign in this code runs
     db.User.findOne({
       where: {
-        account: account
+        account: account,
+        //not sure to leave it just as account? or with webid/password too
+        webid: webid,
+        password: password
       }
     }).then(function(dbUser) {
       // If there's no user with the given email
@@ -22,13 +25,14 @@ passport.use(new LocalStrategy(
           message: "Incorrect account #."
         });
       }
-      // If there is a user with the given email, but the password the user gives us is incorrect
-      else if (!dbUser.validWebid(webid)) {
+      // If there is a user with the given account, but the webid the user gives us is incorrect
+      else if (!dbUser.validwebid(webid)) {
         return done(null, false, {
           message: "Incorrect webid."
         });
       }
-      else (!dbUser.validPassword(password)) {
+      //if there is a user with the given accout AND webid, but the password the user gives us is incorrect
+      else if (!dbUser.validPassword(password)) {
         return done(null, false, {
           message: "Incorrect password."
         });
