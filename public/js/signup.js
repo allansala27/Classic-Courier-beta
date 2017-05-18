@@ -1,6 +1,5 @@
 $(document).ready(function() {
   // Getting references to our form and input
-  var signUpForm = $("form.signup");
   var company = $("input#company-input");
   var name = $("input#name-input");
   var address = $("input#address-input");
@@ -12,7 +11,7 @@ $(document).ready(function() {
   var email = $("input#email-input");
 
   // When the signup button is clicked, we validate the account, webid and password are not blank
-  signUpForm.on("submit", function(event) {
+  $(".submit").on("click", function(event) {
     event.preventDefault();
     var userData = {
       company: company.val().trim(),
