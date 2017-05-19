@@ -6,7 +6,7 @@ module.exports = function(sequelize, DataTypes) {
   var User = sequelize.define("User", {
     // The account cannot be null, and must be a proper account before creation
     account: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         isAccount: true
