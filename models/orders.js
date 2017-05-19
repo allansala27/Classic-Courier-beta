@@ -1,6 +1,9 @@
 module.exports = function(sequelize, DataTypes) {
   var Orders = sequelize.define("Orders", {
 
+    orderedByName: DataTypes.STRING,
+    orderedByPhone: DataTypes.STRING,
+
     originLocationAlias: DataTypes.STRING,
     originStreet: DataTypes.STRING,
     originUnit: DataTypes.INTEGER,
@@ -37,6 +40,7 @@ module.exports = function(sequelize, DataTypes) {
     pallets: DataTypes.INTEGER,
     tape: DataTypes.INTEGER,
 
+
     //!!!!Sony specific accounting fields!!!!!!!!
     //This is what they care about the most!
   	CO_code: DataTypes.INTEGER,
@@ -57,4 +61,3 @@ module.exports = function(sequelize, DataTypes) {
   })
   return Orders;
 };
-

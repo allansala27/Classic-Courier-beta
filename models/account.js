@@ -3,16 +3,13 @@ module.exports = function(sequelize, DataTypes) {
 
   	Company: DataTypes.STRING,
   	Name: DataTypes.STRING,
-  	Company: DataTypes.STRING,
-  	Name: DataTypes.STRING,
+    Address: DataTypes.STRING,
   	City: DataTypes.STRING,
   	State: DataTypes.STRING,
   	Zip_code: DataTypes.STRING,
   	Telephone: DataTypes.STRING,
   	Fax: DataTypes.STRING,
   
-  	//enter account columns
-
   })
   return Account;
 };  
