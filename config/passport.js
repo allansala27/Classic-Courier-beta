@@ -3,42 +3,41 @@ var LocalStrategy = require("passport-local").Strategy;
 
 var db = require("../models");
 
-// Telling passport we want to use a Local Strategy. In other words, we want login with a username/email and password
+// Telling passport we want to use a Local Strategy. In other words, we want login with a account/webid and password
 passport.use(new LocalStrategy(
-  // Our user will sign in using an email, rather than a "username"
+  // Our user will sign in using an account, webid, rather than a "email"
   {
-    usernameField: "account"
+    accountInput: "account",
+    webidInput: "webid",
   },
   function(account, webid, password, done) {
     // When a user tries to sign in this code runs
-    db.User.findOne({
+    db.logininfo.findOne({
       where: {
         account: account,
-        //not sure to leave it just as account? or with webid/password too
-        webid: webid,
-        password: password
+        webid: webid
       }
-    }).then(function(dbUser) {
+    }).then(function(dblogininfo) {
       // If there's no user with the given email
-      if (!dbUser) {
+      if (!dblogininfo) {
         return done(null, false, {
           message: "Incorrect account #."
         });
       }
       // If there is a user with the given account, but the webid the user gives us is incorrect
-      else if (!dbUser.validwebid(webid)) {
+      else if (!dblogininfo.validwebid(webid)) {
         return done(null, false, {
           message: "Incorrect webid."
         });
       }
       //if there is a user with the given accout AND webid, but the password the user gives us is incorrect
-      else if (!dbUser.validPassword(password)) {
+      else if (!dblogininfo.validPassword(password)) {
         return done(null, false, {
           message: "Incorrect password."
         });
       }
       // If none of the above, return the user
-      return done(null, dbUser);
+      return done(null, dblogininfo);
     });
   }
 ));
@@ -46,11 +45,11 @@ passport.use(new LocalStrategy(
 // In order to help keep authentication state across HTTP requests,
 // Sequelize needs to serialize and deserialize the user
 // Just consider this part boilerplate needed to make it all work
-passport.serializeUser(function(user, cb) {
-  cb(null, user);
+passport.serializeLoginInfo(function(logininfo, cb) {
+  cb(null, logininfo);
 });
 
-passport.deserializeUser(function(obj, cb) {
+passport.deserializeLoginInfo(function(obj, cb) {
   cb(null, obj);
 });
 

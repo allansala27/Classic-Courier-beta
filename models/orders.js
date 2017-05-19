@@ -1,6 +1,9 @@
 module.exports = function(sequelize, DataTypes) {
   var Orders = sequelize.define("Orders", {
 
+    orderedByName: DataTypes.STRING,
+    orderedByPhone: DataTypes.STRING,
+
     originLocationAlias: DataTypes.STRING,
     originStreet: DataTypes.STRING,
     originUnit: DataTypes.INTEGER,
