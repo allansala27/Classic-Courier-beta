@@ -15,4 +15,8 @@ router.get('/services', function(req,res){
 	res.render('services');
 });
 
+router.get('/orders', function(req, res) {
+    res.render('orders');
+});
+
 module.exports = router;

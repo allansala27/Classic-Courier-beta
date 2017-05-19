@@ -23,7 +23,7 @@ app.use(express.static("public"));
 // app.use(passport.session());
 
 // Requiring our routes
-// require('./routes')(app);
+require('./routes')(app);
 // require("./routes/html-routes.js")(app);
 // require("./routes/api-routes.js")(app);
 
