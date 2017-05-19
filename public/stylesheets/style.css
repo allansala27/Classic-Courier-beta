@@ -7,7 +7,9 @@ a:hover {
 	color: #ffe315;
 }
 
-.registration-container
+.registration-container {
+    
+}
 
 .navbar {
     border-width: 0 0px 2px 0px;
@@ -79,6 +81,17 @@ body {
 	margin: 0 auto;
 	width:300px;
 	height: auto;
+}
+
+.order_form {
+    background: #000000;
+    width: 100%;
+    height: 450px;
+    padding: 20px 25px 0px;
+    color: #ffffff;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    border-radius: 20px;
 }
 
 section {
