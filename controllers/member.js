@@ -15,7 +15,7 @@ router.get('/members', function(req,res){
 })
 
 router.get('/services', function(req,res){
-	res.redirect('services.html');
+	res.redirect('services');
 })
 
 module.exports = router;
