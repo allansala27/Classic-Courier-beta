@@ -58,7 +58,7 @@ $(document).ready(function() {
 
     function newAdmin(accountNumber, webId, password) {
         $.post("/adminsignup", {
-            account: name,
+            account: accountNumber,
             webId: webId,
             password: password
                 //not sure if this is the correct redirect
