@@ -3,7 +3,7 @@ var express = require('express');
 var router  = express.Router();
 
 router.get('/', function(req,res){
-	res.render('login');
+    res.render('login');
 });
 
 
@@ -16,9 +16,9 @@ router.post('/', function(req, res) {
         console.log(res);
     res.redirect('./member/order');
 })
-    	//compare form entry to decrypted
-    	//if all good, res.redirect
-    	//if not, res.json an error to front
+        //compare form entry to decrypted
+        //if all good, res.redirect
+        //if not, res.json an error to front
         //res.redirect("/orders");
     .catch(function(err) {
         res.json(err);
