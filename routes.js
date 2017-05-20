@@ -9,6 +9,7 @@ module.exports = function(app){
         var order = require('./controllers/order_controller');
         var login = require('./controllers/login_controller');
         var contact = require('./controllers/contact_controller');
+        var adminSignUp = require('./controllers/adminSignUp')
 
         app.use('/', guest);
         app.use('/login', login);
@@ -16,6 +17,7 @@ module.exports = function(app){
         app.use('/signup', signup);
         app.use('/member/order', order);
         app.use('/contact', contact);
+        app.use('/adminsignup', adminSignUp);
 
         // Set Handlebars as the default templating engine.
         app.engine("handlebars", exphbs({ defaultLayout: "main" }));
