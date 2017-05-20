@@ -1,33 +1,37 @@
-{{> nav }}
+{{> nav_orders }}
 
-	    <div id="registration-container" class="container-fluid">
+    <br>
+    <br>
+    <div id="registration-container" class="container-fluid">
         <section class="container">
             <div class="container-page">
                 <div class="row">
                     <div class="col-lg-12">
+                    <div class="header-panel-bg">
                         <h2>Order Form</h2>
+                    </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-6 form-group">
-                        <h3>Pick Up</h3>
+                        <h4>Pick Up</h4>
                         <label>Location </label>
-                        <input id="location-input" class="form-control" type="text" />
+                        <input id="originLocationAlias" class="form-control" type="text" />
                     </div>
                     <div class="col-xs-6 form-group">
-                        <h3>Delivery</h3>
+                        <h4>Delivery</h4>
                         <label>Location</label>
-                        <input id="delivery-location-input" class="form-control" type="text" />
+                        <input id="destinationLocationAlias" class="form-control" type="text" />
                     </div>
                     <div class="col-xs-6 form-group">
                         <div class="row">
                             <div class="col-xs-12 col-sm-8">
                                 <label>Street</label>
-                                <input class="form-control" type="text" />
+                                <input id="originStreet" class="form-control" type="text" />
                             </div>
                             <div class="col-xs-12 col-sm-4">
                                 <label>Unit</label>
-                                <input class="form-control" type="text" />
+                                <input id="originUnit" class="form-control" type="text" />
                             </div>
                         </div>
                     </div>
@@ -35,11 +39,11 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-8">
                                 <label>Street</label>
-                                <input class="form-control" type="text" />
+                                <input id="originStreet" class="form-control" type="text" />
                             </div>
                             <div class="col-xs-12 col-sm-4">
                                 <label>Unit</label>
-                                <input class="form-control" type="text" />
+                                <input id="originUnit" class="form-control" type="text" />
                             </div>
                         </div>
                     </div>
@@ -47,11 +51,11 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-6">
                                 <label>City</label>
-                                <input class="form-control" type="text" />
+                                <input id="originCity" class="form-control" type="text" />
                             </div>
                             <div class="col-xs-12- col-sm-3">
                                 <label for="sel1">State</label>
-                                <select class="form-control" id="state-list">
+                                <select id="originState" class="form-control" id="state-list">
                                     <option value="">N/A</option>
                                     <option value="AK">Alaska</option>
                                     <option value="AL">Alabama</option>
@@ -109,7 +113,7 @@
                             </div>
                             <div class="col-xs-12 col-sm-3">
                                 <label>Zip Code</label>
-                                <input class="form-control" type="text" />
+                                <input id="originZipCode" class="form-control" type="text" />
                             </div>
                         </div>
                     </div>
@@ -117,11 +121,11 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-6">
                                 <label>City</label>
-                                <input class="form-control" type="text" />
+                                <input id="destinationCity" class="form-control" type="text" />
                             </div>
                             <div class="col-xs-12- col-sm-3">
                                 <label for="sel1">State</label>
-                                <select class="form-control" id="state-list">
+                                <select id="destinationState" class="form-control" id="state-list">
                                     <option value="">N/A</option>
                                     <option value="AK">Alaska</option>
                                     <option value="AL">Alabama</option>z`
@@ -179,21 +183,249 @@
                             </div>
                             <div class="col-xs-12 col-sm-3">
                                 <label>Zip Code</label>
+                                <input id="destinationZipCode" class="form-control" type="text" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 form-group">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <form>
+                                    <div class="form-group">
+                                        <label>Country</label>
+                                        <br>
+                                        <div id="originCountry" class="flagstrap" id="basic" data-input-name="country"></div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 form-group">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <form>
+                                    <div class="form-group">
+                                        <label>Country</label>
+                                        <br>
+                                        <div id="destinationCountry" class="flagstrap" id="basic" data-input-name="country"></div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 form-group">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-8">
+                                <label>Contact</label>
+                                <input id="originContact" class="form-control" type="text" />
+                            </div>
+                            <div class="col-xs-12 col-sm-4">
+                                <label>Phone</label>
                                 <input class="form-control" type="text" />
                             </div>
                         </div>
                     </div>
                     <div class="col-xs-6 form-group">
-                        <div class="form-check">
-                            <label class="form-check-label">
-                                <input type="checkbox" class="form-check-input"> Check me out</label>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-8">
+                                <label>Contact</label>
+                                <input id="destinationContact" class="form-control" type="text" />
+                            </div>
+                            <div class="col-xs-12 col-sm-4">
+                                <label>Phone</label>
+                                <input id="destinationPhone" class="form-control" type="text" />
+                            </div>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                        </form>
+                    </div>
+                    <hr>
+                    <!-- order information -->
+                    <div class="col-xs-12 form-group">
+                        <h4>Order Information</h4>
+                        <div class="row">
+                            <label for="dtp_input1" class="col-xs-2 control-label">Pick Up</label>
+                            <div class="input-group date form_datetime col-xs-4" data-date="1979-09-16T05:25:07Z form_space" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
+                                <input class="form-control" size="16" type="text" value="" readonly>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                            </div>
+                            <input type="hidden" id="dtp_input1" value="" />
+                            <br/>
+                            <label for="smFormGroupInput" class="col-sm-1 col-form-label col-form-label-sm form_space">Reference</label>
+                            <div class="col-sm-3 form_space">
+                                <input type="email" class="form-control form-control-sm" id="smFormGroupInput" placeholder="">
+                            </div>
+                            <label for="smFormGroupInput" class="col-sm-1 col-form-label col-form-label-sm form_space">Waybill#:</label>
+                            <div class="col-sm-3 form_space">
+                                <input type="email" class="form-control form-control-sm" id="smFormGroupInput form_space" placeholder="">
+                            </div>
+                            <label for="smFormGroupInput" class="col-sm-1 col-form-label col-form-label-sm form_space">Service:</label>
+                            <div class="col-sm-3 form_space">
+                                <select class="form-control" id="state-list">
+                                    <option value="">N/A</option>
+                                    <option value="expedited">Expedited Rush 1.5 Hours</option>
+                                    <option value="next_day">Next Day</option>
+                                    <option value="on_lot">On Lot</option>
+                                    <option value="rush_service">Rush 3 to 4 Hours Services</option>
+                                    <option value="same_day">Same Day</option>
+                                </select>
+                            </div>
+                            <label for="smFormGroupInput" class="col-sm-1 col-form-label col-form-label-sm form_space">Car:</label>
+                            <div class="col-sm-3 form_space">
+                                <select class="form-control" id="state-list">
+                                    <option value="">N/A</option>
+                                    <option value="AK">12 Ft Truck</option>
+                                    <option value="AL">16 Ft Truck</option>
+                                    <option value="AR">20 Ft Truck</option>
+                                    <option value="AK">26 Ft Truck</option>
+                                    <option value="AL">Car</option>
+                                    <option value="AR">Cargo Van</option>
+                                    <option value="AK">Food Order</option>
+                                    <option value="AL">Lot Rover</option>
+                                    <option value="AR">Mini Van</option>
+                                    <option value="AK">Open Truck</option>
+                                    <option value="AL">Pickup Truck</option>
+                                    <option value="AR">VIP Service</option>
+                                </select>
+                            </div>
+                            <label for="smFormGroupInput" class="col-sm-1 col-form-label col-form-label-sm form_space">Weight:(Lbs)</label>
+                            <div class="col-sm-3 form_space">
+                                <input type="email" class="form-control form-control-sm" id="smFormGroupInput form_space" placeholder="">
+                            </div>
+                            <label for="smFormGroupInput" class="col-sm-1 col-form-label col-form-label-sm form_space">Insurance:</label>
+                            <div class="col-sm-3 form_space">
+                                <select class="form-control" id="state-list">
+                                    <option value="">N/A</option>
+                                    <option value="yes-response">Yes</option>
+                                    <option value="no-response">No</option>
+                                </select>
+                            </div>
+                            <label for="smFormGroupInput" class="col-sm-1 col-form-label col-form-label-sm form_space">Declared Value</label>
+                            <div class="col-sm-2 form_space">
+                                <input type="email" class="form-control form-control-sm" id="smFormGroupInput form_space" placeholder="">
+                            </div>
+                            <label for="smFormGroupInput" class="col-sm-1 col-form-label col-form-label-sm form_space">Department</label>
+                            <div class="col-sm-3 form_space">
+                                <select class="form-control" id="state-list">
+                                    <option value="">N/A</option>
+                                    <option value="dept1">Department 1</option>
+                                    <option value="dept2">Department 2</option>
+                                    <option value="dept3">Department 3</option>
+                                    <option value="dept4">Department 4</option>
+                                </select>
+                            </div>
                         </div>
+                    </div>
+                    <!-- order info end -->
+                    <!-- packages info -->
+                    <div class="col-xs-6 form-group package-box">
+                        <h4>Packages</h4>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-3">
+                                <label>Box</label>
+                                <input class="form-control" type="text" />
+                            </div>
+                            <div class="col-xs-12 col-sm-3">
+                                <label>Envelope</label>
+                                <input class="form-control" type="text" />
+                            </div>
+                            <div class="col-xs-12 col-sm-3">
+                                <label>Film</label>
+                                <input class="form-control" type="text" />
+                            </div>
+                            <div class="col-xs-12 col-sm-3">
+                                <label>Food Order</label>
+                                <input class="form-control" type="text" />
+                            </div>
+                            <div class="col-xs-12 col-sm-3">
+                                <label>Gift</label>
+                                <input class="form-control" type="text" />
+                            </div>
+                            <div class="col-xs-12 col-sm-3">
+                                <label>Pallet</label>
+                                <input class="form-control" type="text" />
+                            </div>
+                            <div class="col-xs-12 col-sm-3">
+                                <label>Tape</label>
+                                <input class="form-control" type="text" />
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                    </div>
+                    <!-- packages info end -->
+                    <!-- Billing starts -->
+                    <div class="col-xs-12 form-group">
+                        <h4>Billing</h4>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-3">
+                                <label>CO Code</label>
+                                <input id="CO_code" class="form-control" type="text" />
+                            </div>
+                            <div class="col-xs-12 col-sm-3">
+                                <label>GL Account</label>
+                                <input id="GL_account" class="form-control" type="text" />
+                            </div>
+                            <div class="col-xs-12 col-sm-3">
+                                <label>Cost Center</label>
+                                <input id="cost_center" class="form-control" type="text" />
+                            </div>
+                            <div class="col-xs-12 col-sm-3">
+                                <label>Profit Center</label>
+                                <input id="profit_center" class="form-control" type="text" />
+                            </div>
+                            <div class="col-xs-12 col-sm-3">
+                                <label>Internal Order#</label>
+                                <input id="internal_order_number" class="form-control" type="text" />
+                            </div>
+                            <div class="col-xs-12 col-sm-3">
+                                <label>WBS Entity</label>
+                                <input id="WBS_entity" class="form-control" type="text" />
+                            </div>
+                            <div class="col-xs-12 col-sm-3">
+                                <label>WBS Service</label>
+                                <input id="WBS_service" class="form-control" type="text" />
+                            </div>
+                            <div class="col-xs-12 col-sm-3">
+                                <label>Market</label>
+                                <input id="market" class="form-control" type="text" />
+                            </div>
+                            <div class="col-xs-12 col-sm-3">
+                                <label>MPM</label>
+                                <input id="MPM" class="form-control" type="text" />
+                            </div>
+                            <div class="col-xs-12 col-sm-3">
+                                <label>Territory</label>
+                                <input id="territory" class="form-control" type="text" />
+                            </div>
+                            <div class="col-xs-12 col-sm-3">
+                                <label>PO Number</label>
+                                <input id="PO_number" class="form-control" type="text" />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Billing End -->
+                    <!-- Comments -->
+                    <div class="col-xs-12 form-group">
+                        <br>
+                        <div class="row">
+                            <label for="comment">Comment:</label>
+                            <textarea class="form-control" rows="5" id="comment"></textarea>
+                        </div>
+                    </div>
+                    <!-- comments end -->
+                    <div class="col-xs-6 form-group">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-8">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" class="form-check-input"> Check me out</label>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-    </div>
 
-{{> footer}}
+{{> footer_orders}}
