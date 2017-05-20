@@ -20,7 +20,7 @@ models.Accounts.create({
     Fax: req.body.fax,
     Email: req.body.email
 }).then(function() {
-    res.send({ redirect: '/member/login' });
+    res.send({ redirect: '/login' });
 }).catch(function(err) {
     res.json(err);
 });
