@@ -9,7 +9,7 @@ router.get('/', function(req, res) {
 
 router.post('/', function(req, res) {
     console.log(req.body);
-    models.adminSignUp.create({
+    models.AdminSignUps.create({
         account: req.body.accountNumber,
         webId: req.body.webId,
         password: req.body.password
