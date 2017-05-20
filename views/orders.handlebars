@@ -243,7 +243,7 @@
                         <h4>Order Information</h4>
                         <div class="row">
                             <label for="dtp_input1" class="col-xs-2 control-label">Pick Up</label>
-                            <div class="input-group date form_datetime col-xs-4" data-date="1979-09-16T05:25:07Z form_space" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
+                            <div id="pickupdate" class="input-group date form_datetime col-xs-4" data-date="1979-09-16T05:25:07Z form_space" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
                                 <input class="form-control" size="16" type="text" value="" readonly>
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
@@ -260,7 +260,7 @@
                             </div>
                             <label for="smFormGroupInput" class="col-sm-1 col-form-label col-form-label-sm form_space">Service:</label>
                             <div class="col-sm-3 form_space">
-                                <select class="form-control" id="state-list">
+                                <select id="service" class="form-control" id="state-list">
                                     <option value="">N/A</option>
                                     <option value="expedited">Expedited Rush 1.5 Hours</option>
                                     <option value="next_day">Next Day</option>
@@ -271,7 +271,7 @@
                             </div>
                             <label for="smFormGroupInput" class="col-sm-1 col-form-label col-form-label-sm form_space">Car:</label>
                             <div class="col-sm-3 form_space">
-                                <select class="form-control" id="state-list">
+                                <select id="vehicle" class="form-control" id="state-list">
                                     <option value="">N/A</option>
                                     <option value="AK">12 Ft Truck</option>
                                     <option value="AL">16 Ft Truck</option>
@@ -293,7 +293,7 @@
                             </div>
                             <label for="smFormGroupInput" class="col-sm-1 col-form-label col-form-label-sm form_space">Insurance:</label>
                             <div class="col-sm-3 form_space">
-                                <select class="form-control" id="state-list">
+                                <select id="insurance" class="form-control" id="state-list">
                                     <option value="">N/A</option>
                                     <option value="yes-response">Yes</option>
                                     <option value="no-response">No</option>
@@ -322,31 +322,31 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-3">
                                 <label>Box</label>
-                                <input class="form-control" type="text" />
+                                <input id="box" class="form-control" type="text" />
                             </div>
                             <div class="col-xs-12 col-sm-3">
                                 <label>Envelope</label>
-                                <input class="form-control" type="text" />
+                                <input id="envelope" class="form-control" type="text" />
                             </div>
                             <div class="col-xs-12 col-sm-3">
                                 <label>Film</label>
-                                <input class="form-control" type="text" />
+                                <input id="film" class="form-control" type="text" />
                             </div>
                             <div class="col-xs-12 col-sm-3">
                                 <label>Food Order</label>
-                                <input class="form-control" type="text" />
+                                <input id="foodOder" class="form-control" type="text" />
                             </div>
                             <div class="col-xs-12 col-sm-3">
                                 <label>Gift</label>
-                                <input class="form-control" type="text" />
+                                <input id="gift" class="form-control" type="text" />
                             </div>
                             <div class="col-xs-12 col-sm-3">
                                 <label>Pallet</label>
-                                <input class="form-control" type="text" />
+                                <input id="pallets" class="form-control" type="text" />
                             </div>
                             <div class="col-xs-12 col-sm-3">
                                 <label>Tape</label>
-                                <input class="form-control" type="text" />
+                                <input id="tape" class="form-control" type="text" />
                             </div>
                         </div>
                         <br>
