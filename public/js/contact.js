@@ -11,10 +11,10 @@ $(document).ready(function() {
 	
 	var storeMessage = function(name, email, subject, message) {
 		$.post("/contact", {
-        Name: name,
-        Email: email,
-        Subject: subject,
-        Message: message
+        name: name,
+        email: email,
+        subject: subject,
+        message: message
             //not sure if this is the correct redirect
     }).then(function(data) {
         window.location = data.redirect;

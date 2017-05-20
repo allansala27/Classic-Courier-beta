@@ -10,11 +10,11 @@ router.post('/', function(req, res) {
 	console.log(req.body);
 models.Contacts.create({
     Name: req.body.name,
-    Email: req.body.name,
-    Subject: req.body.address,
-    Message: req.body.city
+    Email: req.body.email,
+    Subject: req.body.subject,
+    Message: req.body.message
 }).then(function() {
-    res.send({ redirect: '/login' });
+    res.send({ redirect: '/' });
 }).catch(function(err) {
     res.json(err);
 });
