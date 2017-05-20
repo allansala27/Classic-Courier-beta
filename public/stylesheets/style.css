@@ -84,14 +84,37 @@ body {
 }
 
 .order_form {
-    background: #000000;
+    background: #d2d2d2;
     width: 100%;
     height: 450px;
     padding: 20px 25px 0px;
-    color: #ffffff;
+    color: #000;
     margin-top: 15px;
     margin-bottom: 20px;
     border-radius: 20px;
+}
+
+.form_space {
+    padding-bottom: 20px;
+}
+
+.package-box {
+    border: 1px solid #d2d2d2;
+    border-radius: 10px;
+    height: auto;
+    width: 100%;
+}
+
+.header-panel-bg {
+    background: #d2d2d2;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 10px;
+    height: auto;
+    width: 100%;
+    color: #ffffff;
+
 }
 
 section {

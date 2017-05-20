@@ -9,6 +9,7 @@
     <link href="../public/stylesheets/style.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
     <link href="../dist/css/flags.css" rel="stylesheet">
+    <link href="../public/stylesheets/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
 </head>
 
 <body>
@@ -56,17 +57,19 @@
             <div class="container-page">
                 <div class="row">
                     <div class="col-lg-12">
+                    <div class="header-panel-bg">
                         <h2>Order Form</h2>
+                    </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-6 form-group">
-                        <h3>Pick Up</h3>
+                        <h4>Pick Up</h4>
                         <label>Location </label>
                         <input id="location-input" class="form-control" type="text" />
                     </div>
                     <div class="col-xs-6 form-group">
-                        <h3>Delivery</h3>
+                        <h4>Delivery</h4>
                         <label>Location</label>
                         <input id="delivery-location-input" class="form-control" type="text" />
                     </div>
@@ -284,53 +287,156 @@
                             </div>
                         </div>
                     </div>
+                    <hr>
                     <!-- order information -->
-                    <div class="col-lg-12 order_form">
+                    <div class="col-xs-12 form-group">
                         <h4>Order Information</h4>
-                        <br>
-                        <div class="col-xs-6 form-group">
-                            <div class="form-group row">
-                                <label for="smFormGroupInput" class="col-sm-1 col-form-label col-form-label-sm">Name</label>
-                                <div class="col-sm-5">
-                                    <input type="text" class="form-control form-control-sm" id="smFormGroupInput" placeholder="Jane Doe">
-                                </div>
-                                <label for="smFormGroupInput" class="col-sm-1 col-form-label col-form-label-sm"> Email</label>
-                                <div class="col-sm-5">
-                                    <input type="email" class="form-control form-control-sm" id="smFormGroupInput" placeholder="jane.doe@example.com">
-                                </div>
+                        <div class="row">
+                            <label for="dtp_input1" class="col-xs-2 control-label">Pick Up</label>
+                            <div class="input-group date form_datetime col-xs-4" data-date="1979-09-16T05:25:07Z form_space" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
+                                <input class="form-control" size="16" type="text" value="" readonly>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
                             </div>
-                        </div>
-                        <div class="col-xs-6 form-group">
-                            <div class="form-group row">
-                                <label for="smFormGroupInput" class="col-sm-1 col-form-label col-form-label-sm">Name</label>
-                                <div class="col-sm-5">
-                                    <input type="text" class="form-control form-control-sm" id="smFormGroupInput" placeholder="Jane Doe">
-                                </div>
-                                <label for="smFormGroupInput" class="col-sm-1 col-form-label col-form-label-sm"> Email</label>
-                                <div class="col-sm-5">
-                                    <input type="email" class="form-control form-control-sm" id="smFormGroupInput" placeholder="jane.doe@example.com">
-                                </div>
+                            <input type="hidden" id="dtp_input1" value="" />
+                            <br/>
+                            <label for="smFormGroupInput" class="col-sm-1 col-form-label col-form-label-sm form_space">Reference</label>
+                            <div class="col-sm-3 form_space">
+                                <input type="email" class="form-control form-control-sm" id="smFormGroupInput" placeholder="">
+                            </div>
+                            <label for="smFormGroupInput" class="col-sm-1 col-form-label col-form-label-sm form_space">Waybill#:</label>
+                            <div class="col-sm-3 form_space">
+                                <input type="email" class="form-control form-control-sm" id="smFormGroupInput form_space" placeholder="">
+                            </div>
+                            <label for="smFormGroupInput" class="col-sm-1 col-form-label col-form-label-sm form_space">Service:</label>
+                            <div class="col-sm-3 form_space">
+                                <select class="form-control" id="state-list">
+                                    <option value="">N/A</option>
+                                    <option value="expedited">Expedited Rush 1.5 Hours</option>
+                                    <option value="next_day">Next Day</option>
+                                    <option value="on_lot">On Lot</option>
+                                    <option value="rush_service">Rush 3 to 4 Hours Services</option>
+                                    <option value="same_day">Same Day</option>
+                                </select>
+                            </div>
+                            <label for="smFormGroupInput" class="col-sm-1 col-form-label col-form-label-sm form_space">Car:</label>
+                            <div class="col-sm-3 form_space">
+                                <select class="form-control" id="state-list">
+                                    <option value="">N/A</option>
+                                    <option value="AK">12 Ft Truck</option>
+                                    <option value="AL">16 Ft Truck</option>
+                                    <option value="AR">20 Ft Truck</option>
+                                    <option value="AK">26 Ft Truck</option>
+                                    <option value="AL">Car</option>
+                                    <option value="AR">Cargo Van</option>
+                                    <option value="AK">Food Order</option>
+                                    <option value="AL">Lot Rover</option>
+                                    <option value="AR">Mini Van</option>
+                                    <option value="AK">Open Truck</option>
+                                    <option value="AL">Pickup Truck</option>
+                                    <option value="AR">VIP Service</option>
+                                </select>
+                            </div>
+                            <label for="smFormGroupInput" class="col-sm-1 col-form-label col-form-label-sm form_space">Weight:(Lbs)</label>
+                            <div class="col-sm-3 form_space">
+                                <input type="email" class="form-control form-control-sm" id="smFormGroupInput form_space" placeholder="">
+                            </div>
+                            <label for="smFormGroupInput" class="col-sm-1 col-form-label col-form-label-sm form_space">Insurance:</label>
+                            <div class="col-sm-3 form_space">
+                                <select class="form-control" id="state-list">
+                                    <option value="">N/A</option>
+                                    <option value="yes-response">Yes</option>
+                                    <option value="no-response">No</option>
+                                </select>
+                            </div>
+                            <label for="smFormGroupInput" class="col-sm-1 col-form-label col-form-label-sm form_space">Declared Value</label>
+                            <div class="col-sm-2 form_space">
+                                <input type="email" class="form-control form-control-sm" id="smFormGroupInput form_space" placeholder="">
+                            </div>
+                            <label for="smFormGroupInput" class="col-sm-1 col-form-label col-form-label-sm form_space">Department</label>
+                            <div class="col-sm-3 form_space">
+                                <select class="form-control" id="state-list">
+                                    <option value="">N/A</option>
+                                    <option value="dept1">Department 1</option>
+                                    <option value="dept2">Department 2</option>
+                                    <option value="dept3">Department 3</option>
+                                    <option value="dept4">Department 4</option>
+                                </select>
                             </div>
                         </div>
                     </div>
+                    <div class="col-xs-6 form-group package-box">
+                        <h4>Packages</h4>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-3">
+                                <label>Box</label>
+                                <input class="form-control" type="text" />
+                            </div>
+                            <div class="col-xs-12 col-sm-3">
+                                <label>Envelope</label>
+                                <input class="form-control" type="text" />
+                            </div>
+                            <div class="col-xs-12 col-sm-3">
+                                <label>Film</label>
+                                <input class="form-control" type="text" />
+                            </div>
+                            <div class="col-xs-12 col-sm-3">
+                                <label>Food Order</label>
+                                <input class="form-control" type="text" />
+                            </div>
+                            <div class="col-xs-12 col-sm-3">
+                                <label>Gift</label>
+                                <input class="form-control" type="text" />
+                            </div>
+                            <div class="col-xs-12 col-sm-3">
+                                <label>Pallet</label>
+                                <input class="form-control" type="text" />
+                            </div>
+                            <div class="col-xs-12 col-sm-3">
+                                <label>Tape</label>
+                                <input class="form-control" type="text" />
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                    </div>
                     <!-- order info end -->
                     <div class="col-xs-6 form-group">
-                        <div class="form-check">
-                            <label class="form-check-label">
-                                <input type="checkbox" class="form-check-input"> Check me out</label>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-8">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" class="form-check-input"> Check me out</label>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                        </form>
                     </div>
                 </div>
             </div>
         </section>
+        <footer class="footer_sign">
+            <p id="footer_sign">Copyright © 2010-2017 Classic Couriers, Inc. All rights reserved.</p>
+        </footer>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <script src="../dist/js/jquery.flagstrap.js"></script>
     <script>
     $('.flagstrap').flagStrap();
+    </script>
+    <script type="text/javascript" src="../public/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+    <script type="text/javascript">
+    $('.form_datetime').datetimepicker({
+        //language:  'fr',
+        weekStart: 1,
+        todayBtn: 1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        forceParse: 0,
+        showMeridian: 1
+    });
     </script>
 </body>
 
