@@ -14,7 +14,7 @@ router.post('/', function(req, res) {
         webId: req.body.webId
     }).then(function(res) {
         console.log(res);
-    window.location = data.redirect;
+    res.redirect('/member/order');
 })
         //compare form entry to decrypted
         //if all good, res.redirect

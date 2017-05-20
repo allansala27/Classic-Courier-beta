@@ -25,13 +25,13 @@ $(document).ready(function() {
   });
   // loginUser does a post to our "login" route and if successful, redirects us the the orders page
   function loginUser(account, webId, password) {
-    $.post('../login', {
+    $.post('/login', {
       account: account,
       webId: webId,
       password: password
     }).then(function(data) {
         
-    res.redirect('./member/order');
+   window.location = data.redirect;
             // If there's an error, log the error
     }).catch(function(err) {
       console.log(err);
