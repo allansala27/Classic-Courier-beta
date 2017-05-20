@@ -2,7 +2,7 @@ var bcrypt = require("bcrypt-nodejs");
 
 module.exports = function(sequelize, DataTypes) {
 
-  var AdminSignUp = sequelize.define("adminSignUp", {
+  var AdminSignUps = sequelize.define("AdminSignUps", {
     account: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -40,5 +40,5 @@ module.exports = function(sequelize, DataTypes) {
       }
     }
   })
-  return AdminSignUp;
+  return AdminSignUps;
 };  

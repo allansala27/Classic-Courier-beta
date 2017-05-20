@@ -14,7 +14,7 @@ router.post('/', function(req, res) {
         webId: req.body.webId,
         password: req.body.password
     }).then(function() {
-        res.redirect("/");
+        res.send({ redirect: '/login' });
     }).catch(function(err) {
         res.json(err);
     });
