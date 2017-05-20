@@ -1,1 +1,34 @@
-This is the contact page
+{{> nav }}
+
+<body>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Name" id="name-input">
+            </div>
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Email" id="email-input">
+            </div>
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Subject" id="subject-input">
+            </div>
+            <div class="input-group">
+            	<textarea type="text" class="form-control" placeholder="Your Message" cols="40" rows="10" id="message-input"></textarea>
+            </div>
+            <button type="button" class="btn btn-primary">Submit</button>	
+        </div>
+        <div class="col-lg-6">
+            <p>Classic Couriers Inc. (Main Office) Tel: 323.461.3741 Fax: 323.957-3110</p>
+            <p>Classic Couriers (Paramount Studios) 5555 Melrose Avenue Bungalow # 12 Hollywood, CA 90038</p>
+            <p>Classic Couriers (20th Century Fox Studios) 10201 W Pico Boulevard Trailer# 764 Century City, CA 90067</p>
+            <p>Classic Couriers (The Walt Disney Studios) 500 S Buena Vista Burbank, CA 91505</p>
+            <p>Classic Legal Services 205 S. Broadway, Suite 825 Los Angeles, CA 90012 Phone 213-620-5773 Fax 213-536-2041</p>
+        </div>
+    </div>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/contact.js"></script>
+</body>
+
+{{> footer_login }}

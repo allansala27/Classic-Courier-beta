@@ -3,7 +3,7 @@
 var bcrypt = require("bcrypt-nodejs");
 // Creating our User model
 module.exports = function(sequelize, DataTypes) {
-  var User = sequelize.define("User", {
+  var Users = sequelize.define("Users", {
     // The account cannot be null, and must be a proper account before creation
     account: {
       type: DataTypes.STRING,
@@ -42,6 +42,6 @@ module.exports = function(sequelize, DataTypes) {
       }
     }
   });
-  return User;
+  return Users;
 
 };
