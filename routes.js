@@ -7,8 +7,10 @@ module.exports = function(app){
         var member = require('./controllers/member');
         var signup = require('./controllers/signup_controller');
         var order = require('./controllers/order_controller');
+        var login = require('./controllers/login_controller');
 
         app.use('/', guest);
+        app.use('/login', login);
         app.use('/member', member);
         app.use('/signup', signup);
         app.use('/member/order', order);
